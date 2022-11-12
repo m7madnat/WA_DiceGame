@@ -33,6 +33,7 @@ function App() {
       activePlayer === 1 ? setActivePlayer(2) : setActivePlayer(1);
       setIsGameOver(true)
     }      
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dice.number, dice2.number]);
 
   useEffect(() => {

@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from './components/Button';
-import Dice from './components/Dice';
-import {Player1} from './components/Player';
-import {Player2} from './components/Player';
+import Board from './components/Board';
 
 function App() {
   const [isPlay, setIsPlay] = useState(false);
@@ -75,17 +72,24 @@ function App() {
   const resetGame = () => {
     window.location.reload();
   };
-
-  return (    
-    <main>
-      <Player1 activePlayer={activePlayer} isGameOver={isGameOver} currentScore={currentScore} score1={score1}/>
-      <Player2 activePlayer={activePlayer} isGameOver={isGameOver} currentScore={currentScore} score2={score2}/>     
-      <Dice isPlay={isPlay} isPlay2={isPlay2} dice={dice} dice2={dice2}/>         
-      <Button text="New game" className="btn btn--new" onClick={resetGame} />
-      <Button text="Roll dice" className="btn btn--roll" onClick={rollDice} />
-      <Button text="Hold" className="btn btn--hold" onClick={holdGame}/>               
-    </main>
-  );
+  return(
+    <div>
+  <Board 
+    isPlay={isPlay}
+    isPlay2={isPlay2}
+    activePlayer={activePlayer}
+    isGameOver={isGameOver}
+    currentScore={currentScore}
+    score1={score1}
+    score2={score2}
+    dice={dice}
+    dice2={dice2}
+    rollDice={rollDice}
+    holdGame={holdGame}
+    resetGame={resetGame}   
+  />
+  </div>
+  )
 }
 
 export default App;

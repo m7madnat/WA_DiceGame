@@ -1,3 +1,15 @@
+A react project where I built a Dice game.
+
+
+## 🚀 Live Demo:
+
+https://dicegame-m7mad.netlify.app/
+
+<a href="https://dicegame-m7mad.netlify.app/" target="_blank">
+  <img src="https://i.imgur.com/QqN019k.png" width=“480” height=“350”>
+</a>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
